@@ -1,3 +1,11 @@
+'''
+cd "C:\scripts\GH - complete\FSND-auth-example\BasicFlaskAuth"
+$env:FLASK_APP="C:\scripts\GH - complete\FSND-auth-example\BasicFlaskAuth\app.py"
+$env:FLASK_ENV = "development"
+flask run
+'''
+
+
 from flask import Flask, request, abort
 import json
 from functools import wraps
@@ -7,9 +15,9 @@ from urllib.request import urlopen
 
 app = Flask(__name__)
 
-AUTH0_DOMAIN = @TODO_REPLACE_WITH_YOUR_DOMAIN
+AUTH0_DOMAIN = 'fsnd-auth-mesangue.auth0.com'
 ALGORITHMS = ['RS256']
-API_AUDIENCE = @TODO_REPLACE_WITH_YOUR_API_AUDIENCE
+API_AUDIENCE = 'image'
 
 
 class AuthError(Exception):
